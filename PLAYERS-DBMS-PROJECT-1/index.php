@@ -87,7 +87,7 @@ require('admin/inc/essentials.php');
           >
           <a href="#particles-js" class="nav-item" active-color="#eab676">FAQ</a>
           <a href="#footer" class="nav-item" active-color="#eab676">Contact</a>
-          <a href="#cta" class="nav-item" active-color="rebeccapurple">Log in</a>
+          <a href="login_SportoZo.html" class="nav-item" active-color="rebeccapurple">Log in</a>
           <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signup">
   sign-up
@@ -104,7 +104,7 @@ require('admin/inc/essentials.php');
       </div>
       <div class="modal-body">
         <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign-up</h1> -->
-        <form method="post" id="signup-form">
+        <form method="post" id="signup-form" action = "signup_db_connection.php">
           <div class="form-group">
             <!-- <label for="exampleInputEmail1">Email address</label> -->
             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -252,52 +252,22 @@ require('admin/inc/essentials.php');
       <div class="container">
         <div class="cta">
           <div class="cta-text-box">
-            <h2 class="heading-secondary">Registrations are open</h2>
+            <h2 class="heading-secondary">Hub for all Champions.</h2>
             <p class="cta-text">
               sign-up and register for upcomming tournaments and Stay up to date
-              on your favourite sports and athletes. Watch original Olympic
+              on your favourite sports and athletes. Watch original SportoZo
               films and documentaries. Get exclusive stories about your
-              favourite Olympic athletes and sports into your e-mail inbox.
+              favourit SportoZo athletes and sports into your e-mail inbox and many more.
             </p>
 
-            <form
-              class="cta-form"
-              name="sign-up"
-              action="login_checksz.php"
-              method="POST"
-            >
-              <div>
-                <label for="full-name"> User Name</label>
-                <input
-                  id="full-name"
-                  type="text"
-                  placeholder="John Smith"
-                  name="fname"
-                  required
-                />
-              </div>
+            <form action = "#signup-form" method = "post">
 
-              <div>
-                <label for="email">password</label>
-                <!-- <input
-                  id="email"
-                  type="email"
-                  placeholder="me@example.com"
-                  name="email"
-                  required
-                /> -->
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="xyz"
-                  name="pw"
-                  requireds
-                />
-              </div>
-              <button class="btnm btn--formm">Log in</button>
+              <div class = "explore_more">
+              <button class="btnm btn--formm">Signup to Explore More</button></div>
 
               <!-- <input type="checkbox" />
               <input type="number" /> -->
+
             </form>
           </div>
           <div class="cta-img-box reveal" role="img">

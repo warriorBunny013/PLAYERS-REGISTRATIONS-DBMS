@@ -1,16 +1,14 @@
 <?php
 include('conn.php');
-$userid=$_POST['fname'];
+$userid=$_POST['user_name'];
 $pass=$_POST['pw'];
-// echo $userid;
-// echo $pass;S
 
 $sql="select * from masterlogin where user_name='$userid' and password='$pass' ";
 $res=mysqli_query($conn,$sql);
 if($result=mysqli_fetch_assoc($res))
 {
-$_SESSION['fname']=$result['fname'];
-header('location:loginDestination.html');
+$_SESSION['user_name']=$result['user_name'];
+header('location:index_after_login.php');
 }
 else
 {
